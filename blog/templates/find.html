@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+{% block content %}
+<br>
+<div class="row">
+    <div class="container border" style="text-align: center;">
+        <h2 align="center">{{post.title}}</h2>
+        <img class="card-img-top" src="/uploads/{{post.image}}" alt="{{post.title}}" style="width: 400px;height: 400px;">
+        </br>
+        <p><b>created at:</b> {{post.created_on}}</p>
+        <p><b>updated at:</b> {{post.updated_on}}</p>
+        <p><small><code>Author: {{post.author.username}}, Access: {{post.access|yesno:"Just Users,All"}}</code></small></p>
+        <p>{{post.content}}</p>
+    </div>
+    
+</div>
+{% endblock content %}

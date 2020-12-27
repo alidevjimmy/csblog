@@ -1,0 +1,49 @@
+{% extends "base.html"%}
+{% block content %}
+<br>
+<div class="row">
+    <div class="container d-flex">
+        {% for post in posts %}
+        {%if user.is_authenticated == False%}
+        {%if post.access == False%}
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xs-6">
+          <div class="card">
+              <img class="card-img-top" src="/uploads/{{post.image}}" alt="{{post.title}}" width="200" height="150">
+            <div class="card-body">
+              <h5 class="card-title"><b>{{post.title}}</b></h5>
+              
+              <p class="card-text">
+                  {{post.content}}
+                  <p><code><small>Author: {{post.author.username}}</small></code>
+                      </p>
+                  <p><code><small>Access: {{post.access|yesno:"Just Users,All"}}</small></code></p>
+              </p>
+          
+              <a href="{% url 'find_post' post.slug %}" class="btn btn-primary">More</a>
+            </div>
+          </div>
+        </div>
+        {%endif%}
+        {%else%}
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xs-6">
+          <div class="card">
+              <img class="card-img-top" src="/uploads/{{post.image}}" alt="{{post.title}}" width="200" height="150">
+            <div class="card-body">
+              <h5 class="card-title"><b>{{post.title}}</b></h5>
+              <p class="card-text">
+                  {{post.content}}
+                  <p><code><small>Author: {{post.author.username}}</small></code>
+                      </p>
+                  <p><code><small>Access: {{post.access|yesno:"Just Users,All"}}</small></code></p>
+              </p>
+          
+              <a href="{% url 'find_post' post.slug %}" class="btn btn-primary">More</a>
+            </div>
+          </div>
+        </div>
+        {%endif%}
+        {% endfor %}
+    </div>
+    
+</div>
+{% endblock content %}
