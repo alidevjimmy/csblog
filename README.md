@@ -1,6 +1,6 @@
 # csblog
 cs50 final project
-#CSblog
+
 CSblog is an **open-source** website for authers to share their stories and knowledge with the people around the world.
 
 # Why we created CSblog?
