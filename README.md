@@ -6,6 +6,7 @@ CSblog is an **open-source** website for authers to share their stories and know
 We recently noticed that authers have almost no pivacy in the websites that they use for writing.
 So we decided to make a **safe** website for them.
 You can write posts in CSblog without logging in however, you can also log in to the website to see the stories written by the confirmed authers.
+
 <img src="http://mypy-lang.org/static/mypy_light.svg" alt="mypy logo" width="300px"/>
 
 Mypy: Optional Static Typing for Python
