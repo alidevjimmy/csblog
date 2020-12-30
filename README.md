@@ -2,9 +2,11 @@
 cs50 final project
 #CSblog
 CSblog is an **open-source** website for authers to share their stories and knowledge with the people around the world.
+
 #Why we created CSblog?
+
 We recently noticed that authers have almost no pivacy in the websites that they use for writing.
-So we decided to make a **safe** website for them.
+So we decided to make a **safe** place for them.
 You can write posts in CSblog without logging in however, you can also log in to the website to see the stories written by the confirmed authers.
 
 <img src="http://mypy-lang.org/static/mypy_light.svg" alt="mypy logo" width="300px"/>
